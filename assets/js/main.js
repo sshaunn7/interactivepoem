@@ -5,7 +5,7 @@ function randomNumber(min, max) {
 }
 
 
-letdivs = document.querySelectorAll(".grid-container div");
+let divs = document.querySelectorAll(".grid-container div");
 
 
 function randomize() {
