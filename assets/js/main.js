@@ -1,7 +1,7 @@
 // main.js
 
 function randomNumber(min, max) {
-    return MMath.random() * (max - min) + min;
+    return Math.random() * (max - min) + min;
 }
 
 
@@ -23,7 +23,7 @@ function randomize() {
     });
 
     // Back to original position after 1.5s
-    settimeout(function () {
+    setTimeout(function () {
         divs.forEach(function (div) {
             div.style.transform = 
                 "scale(1) translate(0%, 0%) rotate(0deg)";
