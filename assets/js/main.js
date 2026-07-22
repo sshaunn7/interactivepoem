@@ -30,4 +30,4 @@ function randomize() {
 }
 
 
-document.addEventListener("click", randomize);
+document.addEventListener("click", jump);
