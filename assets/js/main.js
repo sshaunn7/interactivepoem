@@ -1,6 +1,5 @@
 // main.js
 
-
 function randomNumber(min, max) {
     returnMath.floor(Math.random() * (max - min + 1)) + min;
 }
