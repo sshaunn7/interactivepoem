@@ -1,7 +1,7 @@
 // main.js
 
 function randomNumber(min, max) {
-    returnMath.floor(Math.random() * (max - min + 1)) + min;
+    return MMath.random() * (max - min) + min;
 }
 
 
@@ -13,21 +13,22 @@ function randomize() {
 
 
     divs.forEach( function (div) {
-        let scale = randomNumber(.5, 1.2);
+        let scale = randomNumber(.5, 1.5);
         let translateX = randomNumber(-120, 120);
         let translateY = randomNumber(-80, 80);
         let rotate = randomNumber(-360, 360);
 
-    
-        if (Math.random() > .5) {
-            scale = 1; // don't affect scale
-            translateX = randomNumber(0, 80);
-            translateY = randomNumber(0, 80);
-        }
+        div.style.transform =
+            `scale(${scale}) translate(${translateX}%, ${translateY}%) rotate(${rotate}deg)`;
+    });
 
-        div.style.transform = `scale(${scale}) translate(${translateX}%, ${translateY}%) rotate(${rotate}deg)`;
-    })
+    // Back to original position after 1.5s
+    settimeout(function () {
+        divs.forEach(function (div) {
+            div.style.transform = 
+                "scale(1) translate(0%, 0%) rotate(0deg)";
+        });
+    }, 1500);
 }
-
 
 document.addEventListener("click", randomize);
