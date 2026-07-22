@@ -13,13 +13,13 @@ function randomize() {
 
 
     divs.forEach( function (div) {
-        let scale = randomNumber(.5, 1.5);
-        let translateX = randomNumber(-120, 120);
-        let translateY = randomNumber(-80, 80);
+        let scale = Math.random() + 0.5;
+        let translateX = randomNumber(-200, 200);
+        let translateY = randomNumber(-150, 150);
         let rotate = randomNumber(-360, 360);
 
         div.style.transform =
-            `scale(${scale}) translate(${translateX}%, ${translateY}%) rotate(${rotate}deg)`;
+            `translate(${translateX}px, ${translateY}px) rotate(${rotate}deg) scale(${scale})`;
     });
 
     // Back to original position after 1.5s
