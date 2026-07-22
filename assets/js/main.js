@@ -14,9 +14,9 @@ function randomize() {
 
     divs.forEach( function (div) {
         let scale = randomNumber(.5, 1.2);
-        let translateX = randomNumber(0, 50);
-        let translateY = randomNumber(0, 20);
-        let rotate = randomNumber(0, 360);
+        let translateX = randomNumber(-120, 120);
+        let translateY = randomNumber(-80, 80);
+        let rotate = randomNumber(-360, 360);
 
     
         if (Math.random() > .5) {
